@@ -8,8 +8,8 @@ const char* ssid = "HUAWEI.....";
 const char* password = "...";
  
 const char* server = "api.thingspeak.com";
-#define DHTPIN1 4 // D2 pin on Nodemcu
-#define DHTPIN2 0 // D3 pin on Nodemcu
+#define DHTPIN1 0 // D3 pin on Nodemcu
+#define DHTPIN2 4 // D2 pin on Nodemcu
  
 DHT dht1(DHTPIN1, DHT22, 11);
 DHT dht2(DHTPIN2, DHT22, 11);
@@ -119,7 +119,7 @@ void loop() {
   }
   client.stop();
    
-  if(counter==2000000){
+  if(counter==2500000){
     Serial.print("Counter:    ");
     Serial.println(counter);
     counter=0;
